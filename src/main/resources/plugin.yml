@@ -1,0 +1,24 @@
+name: CheckAnyDesk
+version: 1.4.0
+main: ru.kursk.checkanydesk.CheckAnyDeskPlugin
+api-version: '1.21'
+author: Arena.ai
+website: https://example.invalid
+commands:
+  check:
+    description: Управление проверкой игрока через AnyDesk
+    usage: /check <ник> | /check add/remove <время> | /check stop | /check ban
+    permission: check.admin
+  proverka:
+    description: Установить комнату, куда телепортируются игроки при проверке
+    usage: /proverka set
+permissions:
+  check.admin:
+    description: Позволяет напрямую использовать /check и вести проверку игроков
+    default: op
+  check.report:
+    description: Позволяет начинать проверку только из меню ReportCenter
+    default: false
+  check.setup:
+    description: Позволяет задавать точку комнаты проверки через /proverka set
+    default: op
